@@ -5,39 +5,49 @@
 		<state id="0" name="q0">
 			<x>383.0</x>
 			<y>178.0</y>
+			<initial/>
 		</state>
 		<state id="1" name="q1">
-			<x>557.0</x>
-			<y>183.0</y>
+			<x>551.0</x>
+			<y>178.0</y>
 		</state>
 		<state id="2" name="q2">
-			<x>788.0</x>
-			<y>181.0</y>
+			<x>688.0</x>
+			<y>178.0</y>
 		</state>
 		<state id="3" name="q3">
-			<x>1039.0</x>
-			<y>188.0</y>
+			<x>781.0</x>
+			<y>177.0</y>
 		</state>
 		<state id="4" name="q4">
-			<x>1045.0</x>
-			<y>404.0</y>
-			<final/>
+			<x>782.0</x>
+			<y>370.0</y>
 		</state>
 		<state id="5" name="q5">
-			<x>775.0</x>
-			<y>403.0</y>
-		</state>
-		<state id="6" name="q6">
-			<x>158.0</x>
-			<y>181.0</y>
-			<initial/>
+			<x>546.0</x>
+			<y>371.0</y>
+			<final/>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
-			<from>2</from>
-			<to>3</to>
-			<read>&lt;</read>
-			<write>&lt;</write>
+			<from>4</from>
+			<to>5</to>
+			<read/>
+			<write/>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>a</read>
+			<write>X</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>b</read>
+			<write>X</write>
 			<move>R</move>
 		</transition>
 		<transition>
@@ -49,6 +59,15 @@
 		</transition>
 		<transition>
 			<from>2</from>
+			<to>0</to>
+			<controlx>561</controlx>
+			<controly>-55</controly>
+			<read>X</read>
+			<write>X</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>2</from>
 			<to>2</to>
 			<read>a</read>
 			<write>a</write>
@@ -62,20 +81,6 @@
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>5</from>
-			<to>5</to>
-			<read>X</read>
-			<write>X</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>5</from>
-			<to>5</to>
-			<read>Y</read>
-			<write>Y</write>
-			<move>L</move>
-		</transition>
-		<transition>
 			<from>2</from>
 			<to>2</to>
 			<read>Y</read>
@@ -83,43 +88,29 @@
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>0</from>
+			<from>4</from>
 			<to>4</to>
-			<controlx>599</controlx>
-			<controly>622</controly>
-			<read>&gt;</read>
-			<write>&gt;</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>3</to>
-			<controlx>777</controlx>
-			<controly>421</controly>
+			<controlx>791</controlx>
+			<controly>579</controly>
 			<read>Y</read>
 			<write>Y</write>
-			<move>R</move>
+			<move>L</move>
 		</transition>
 		<transition>
-			<from>5</from>
+			<from>4</from>
 			<to>4</to>
-			<read>&lt;</read>
-			<write>&lt;</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>3</from>
-			<to>3</to>
+			<controlx>785</controlx>
+			<controly>631</controly>
 			<read>X</read>
 			<write>X</write>
-			<move>R</move>
+			<move>L</move>
 		</transition>
 		<transition>
 			<from>3</from>
-			<to>3</to>
-			<read>Y</read>
-			<write>Y</write>
-			<move>R</move>
+			<to>4</to>
+			<read/>
+			<write/>
+			<move>L</move>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -144,39 +135,25 @@
 		</transition>
 		<transition>
 			<from>3</from>
-			<to>4</to>
-			<read>&gt;</read>
-			<write>&gt;</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>6</from>
-			<to>0</to>
-			<read>&lt;</read>
-			<write>&lt;</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>b</read>
-			<write>X</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>a</read>
-			<write>X</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>0</to>
-			<controlx>548</controlx>
-			<controly>-44</controly>
+			<to>3</to>
 			<read>X</read>
 			<write>X</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>3</to>
+			<read>Y</read>
+			<write>Y</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>3</to>
+			<controlx>660</controlx>
+			<controly>445</controly>
+			<read>Y</read>
+			<write>Y</write>
 			<move>R</move>
 		</transition>
 	</automaton>
